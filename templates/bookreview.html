@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  Book Review Page!!
+{% endblock %}
+
+{% block body %}
+  <h5>Isbn no: {{book_info.isbn}}</h5>
+  <h3><em>{{book_info.title}}</em> by: {{book_info.author}}</h3>
+  <p>Goodreads average rating: <em>{{ rate }}</em> out of 5 </p>
+  <p></p>
+
+  <p>My Book Review rating: <em>{{ my_rate }}</em> out of 5 </p>
+  <p></p>
+
+  <!-- User can select their rating for the book selected -->
+  <form class="" action="{{url_for('bookrating', book_isbn=book_info.isbn)}}" method="post">
+    <select class="" name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button type="submit" name="button">submit</button>
+  </form>
+
+  <!--Go back to search page-->
+  <form class="" action="{{url_for('search')}}" method="post">
+    <button type="submit" name="button">Search Again!</button>
+  </form>
+
+  <!-- logout section -->
+  <form class="" action="{{url_for('RegistrationForm')}}" method="post">
+    <button type="submit" name="button">logout</button>
+  </form>
+  <p></p>
+
+
+{% endblock %}

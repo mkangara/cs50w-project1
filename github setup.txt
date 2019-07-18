@@ -1,0 +1,5 @@
+initialized project 1 on git creating a repository called 'origin' locally
+created a GitHub repository named it cs50w-project1
+command line  to add the local repository 'origin' to remote GitHub repository "cs50w-project1"
+....git remote add origin https://github.com/mkangara/cs50w-project1.git
+....git push -u origin master

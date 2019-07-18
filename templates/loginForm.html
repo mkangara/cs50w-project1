@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  Login Page!
+{% endblock %}
+
+{% block body %}
+  <form class="" action="{{url_for('verifylogin')}}" method="post">
+    Name:<br>
+    <input type="text" name="username" placeholder="Enter name here"><br>
+    Password:<br>
+    <input type="password" name="password" placeholder="Your password"><br>
+    <br>
+    <button type="submit" name="button">Login</button>
+  </form>
+
+  <p><a href="{{url_for('RegistrationForm')}}">Register</a> here! </p>
+{% endblock %}

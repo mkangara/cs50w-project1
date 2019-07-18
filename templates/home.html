@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% for article in articles %}
+      <h1>{{ article.Title }}</h1>
+      <p>{{ article.Author }}</p>
+      <p>{{ article.Content }}</p>
+    {% endfor %}
+{% endblock %}

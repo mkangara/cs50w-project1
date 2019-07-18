@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <h1>Welcome to the search page</h1>
+    <p>We have many books that you can rent. Please search for the book you are interested in!</p>
+    <br>
+
+    <form class="" action="{{url_for('book_search')}}" method="post">
+      <input type="text" name="searchbook" placeholder="search">
+      <button type="submit" name="button">Find!</button>
+    </form>
+
+
+    <ul>
+      {%for book in books%}
+
+        <li><a href="{{ url_for('bookreview', book_isbn=book.isbn) }}">{{ book.title }}</a> by {{ book.author }}</li>
+      {%endfor%}
+    </ul>
+
+
+{% endblock %}

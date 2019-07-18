@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block heading %}{% endblock %}
+
+{% block body %}
+<h1>Sign Up Today!</h1>
+  <form action="{{url_for('register')}}" method="post">
+      Name:<br>
+      <input type="text" name="username" placeholder="Enter name here"><br>
+      <br>
+      Password:<br>
+      <input type="password" name="password" placeholder="Your password">
+      <input type="password" name="confirm_password" placeholder="Confirm password"><br>
+      <br>
+      <button type="submit">Register!</button>
+  </form>
+
+  <p><a href="{{ url_for('loginForm')}}">Login here</a> if already registered</p>
+{% endblock %}
